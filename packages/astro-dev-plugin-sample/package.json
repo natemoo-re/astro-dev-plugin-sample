@@ -1,0 +1,23 @@
+{
+  "name": "astro-dev-plugin-sample",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "keywords": [
+    "astro-integration"
+  ],
+  "exports": {
+    ".": "./integration.ts",
+    "./plugin": "./plugin.tsx"
+  },
+  "peerDependencies": {
+    "astro": "^3.6.2"
+  },
+  "dependencies": {
+    "astro": "^3.6.2",
+    "preact": "^10.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  }
+}

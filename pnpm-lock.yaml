@@ -8,14 +8,14 @@ importers:
 
   .: {}
 
-  packages/astro-dev-plugin-reboot:
+  packages/astro-dev-plugin-sample:
     dependencies:
-      '@napi-rs/system-shutdown':
-        specifier: ^1.0.0
-        version: 1.0.0
       astro:
         specifier: ^3.6.2
         version: 3.6.2(@types/node@20.10.0)
+      preact:
+        specifier: ^10.19.2
+        version: 10.19.2
     devDependencies:
       '@types/node':
         specifier: ^20.10.0
@@ -35,9 +35,9 @@ importers:
       astro:
         specifier: ^3.6.2
         version: 3.6.2(@types/node@20.10.0)
-      astro-dev-plugin-reboot:
+      astro-dev-plugin-sample:
         specifier: workspace:*
-        version: link:../packages/astro-dev-plugin-reboot
+        version: link:../packages/astro-dev-plugin-sample
 
 packages:
 
@@ -818,112 +818,6 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /@napi-rs/system-shutdown-darwin-arm64@1.0.0:
-    resolution: {integrity: sha512-Rzc5tX3Wv7MoibE4lgDTKwnVpaCl61Pe00iWHAZKzVU3+bwCIQhM0Fw/Cl1ji10qv77m/cxXS5d/4h30thxWEA==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-darwin-x64@1.0.0:
-    resolution: {integrity: sha512-wRFa8Ase3Ct5vezHLkOSdfdbuwrZhWXiGwOHbvtfSG9B3u1LzHZkNvRKO0crOE5LUQlNDdzGUtiL1qsByem6hA==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-linux-arm-gnueabihf@1.0.0:
-    resolution: {integrity: sha512-0furk2X0TojqBinaJxJDYhTwZUlYFJCrVi7fgTZRuFoNwu4dpwk2qzo7QgqbyZkcoS++mhS19bSOfAR514IYyA==}
-    engines: {node: '>= 10'}
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-linux-arm64-gnu@1.0.0:
-    resolution: {integrity: sha512-eD6Y4HvCs+KS4/SAZHn3BFQWLguEiNo4zJDweYX4/Jaa2rWI5/zIRDNfCdzwGYxL2S269JV73j5fqhBO9CAwCg==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-linux-arm64-musl@1.0.0:
-    resolution: {integrity: sha512-4mop/Y7Q/RBNh1sZHy7lEjEMwpxcqRw78cclfUkR6qc0wOblunjHJMOUMi1t2lDeeaRyip3Vs0wy1MVOsYux+A==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-linux-x64-gnu@1.0.0:
-    resolution: {integrity: sha512-aUN5LYpj/JwJhaUJ2IDcSbrKE/U0a1bXzdhnt6rJ9K8ZpKPdPx9h+XnxrxZDA85GidUjVg4VnCg5z6VLT1Ak5A==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-linux-x64-musl@1.0.0:
-    resolution: {integrity: sha512-L250XTSqD7LQjHDio8IwRQmAIdWNZZAKhpt6dHzJy8VN/p6Z8BKjbj0L6v+SyWyUYjDf5YxmNtmqFErW8CiMTQ==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-win32-arm64-msvc@1.0.0:
-    resolution: {integrity: sha512-O/Kdn+Q+8wrwz8Q3UGMBqiPzpODXLS3hj51aNDWg6Kx+/CzmW/RsMnCXXs5onQrFixnTPywctgNNF3tHZlzWUg==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-win32-ia32-msvc@1.0.0:
-    resolution: {integrity: sha512-yw5TbTu2XQAE4X04wrLGWGYLWPL6Xp0ZM1zYPaiaYXDdRbRz48Tn0JfOX/mTrSRgFs/kKtVyw79zifqJ6AEhlw==}
-    engines: {node: '>= 10'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown-win32-x64-msvc@1.0.0:
-    resolution: {integrity: sha512-MH3oHGgIgc5TidOqshk5WhnnsPZz5evoN77YMtZVEYTkeFnfzP825VSRqLXdfnRuwtVNd81dAgfe8Hw350PfnQ==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@napi-rs/system-shutdown@1.0.0:
-    resolution: {integrity: sha512-BNetqgnICF9v/lJ0Nwnx7iY2Fqej8OQl43EUCjyTQlspzQdofUGZAv3fNl1ZxIheetaH3F3jKkMHNPCXYL1cKg==}
-    engines: {node: '>= 10'}
-    optionalDependencies:
-      '@napi-rs/system-shutdown-darwin-arm64': 1.0.0
-      '@napi-rs/system-shutdown-darwin-x64': 1.0.0
-      '@napi-rs/system-shutdown-linux-arm-gnueabihf': 1.0.0
-      '@napi-rs/system-shutdown-linux-arm64-gnu': 1.0.0
-      '@napi-rs/system-shutdown-linux-arm64-musl': 1.0.0
-      '@napi-rs/system-shutdown-linux-x64-gnu': 1.0.0
-      '@napi-rs/system-shutdown-linux-x64-musl': 1.0.0
-      '@napi-rs/system-shutdown-win32-arm64-msvc': 1.0.0
-      '@napi-rs/system-shutdown-win32-ia32-msvc': 1.0.0
-      '@napi-rs/system-shutdown-win32-x64-msvc': 1.0.0
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -3232,6 +3126,10 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: false
+
+  /preact@10.19.2:
+    resolution: {integrity: sha512-UA9DX/OJwv6YwP9Vn7Ti/vF80XL+YA5H2l7BpCtUr3ya8LWHFzpiO5R+N7dN16ujpIxhekRFuOOF82bXX7K/lg==}
     dev: false
 
   /prebuild-install@7.1.1:

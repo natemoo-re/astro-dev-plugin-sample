@@ -1,5 +1,6 @@
 {
-  "name": "astro-dev-plugin-reboot",
+  "name": "root",
+  "private": true,
   "scripts": {
     "dev": "pnpm --filter playground dev",
     "script:release": "node ./scripts/release.mjs"
